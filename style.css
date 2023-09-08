@@ -170,6 +170,16 @@ button[type="submit"]:active {
     border: solid 2px var(--accent-color);
 }
 
+.submit a {
+    text-decoration: none;
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.submit a:active {
+    color: var(--light-accent-color);
+}
+
 #invalid {
     border-color: red;
 }
