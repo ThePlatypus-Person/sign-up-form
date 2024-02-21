@@ -1,192 +1,28 @@
-:root {
-    --text-color: #595959;
-    --background-color: #f2f2f2;
-    --border-color: #E5E7EB;
-    --accent-color: #bd981f;
-    --light-accent-color: #d1cad3;
-}
-
-@font-face {
-    font-family: Norse;
-    src: url("font/Norse-Bold.otf") format("opentype");
-    font-style: normal;
-    font-weight: bold;
-}
-
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    width: 100%;
-
-}
-
-.root {
-    display: flex;
     height: 100%;
     width: 100%;
 }
 
-.root > .photo {
-    flex: 1 1 0;
-    background-image: url("img/Jefferson_Sees.jpg");
-    background-size: cover;
-}
-
-.root > .photo > .logo {
-    position: relative;
-    top: 25%;
-    width: 100%;
-    height: 140px;
-    padding: 10px;
-
+.container {
+    height: 100%;;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-
-    background-color: hsla(0, 0%, 0%, 0.6);
-    font-family: Norse;
-    color: white;
-    font-size: 6rem;
-    text-transform: uppercase;
+    background-color: red;
 }
 
-.root > .photo > .logo > img {
+.hero {
     height: 100%;
-    width: auto;
+    width: 400px;
 }
 
-.root > .content {
-    flex: 2 1 0;
-}
-
-.root > .content > form {
+.hero > img {
     height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    background-color: var(--background-color);
-    font-family: Roboto;
-}
-
-.root > .content > form > .desc {
-    font-size: 1.5rem;
-    font-weight: 500;
-    width: 50ch;
-    padding: 20px 60px;
-}
-
-.root > .content > form > .desc > div:nth-child(2) {
-    margin-bottom: 1.5ch;
-}
-
-
-.root > .content > form > .form {
-    background-color: #fff;
     width: 100%;
-    padding: 20px 60px;
-
-    color: var(--text-color);
+    object-fit: cover;
 }
 
-h2 {
-    padding: 0;
-    margin: 0 0 20px 0;
-}
-
-form input {
-    appearance: none;
-    border: solid 1px var(--border-color);
-    border-radius: 5px;
-    height: 2rem;
-    padding: 15px;
-    font-size: 1rem;
-}
-
-form input:focus {
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.2);
-}
-
-form input::placeholder {
-    color: var(--light-accent-color);
-}
-
-.form fieldset {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-
-    gap: 40px;
-    width: 70%;
-    height: 80px;
-    
-    border: none;
-}
-
-.form fieldset > div {
-    flex: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    font-weight: 500;
-    letter-spacing: 2px;
-}
-
-.root > .content > form > .submit {
-    padding: 20px 60px;
-    font-size: 1rem;
-}
-
-button[type="submit"] {
-    height: 40px;
-    padding: 10px 45px;
-    border-radius: 5px;
-    border: none;
-    margin-bottom: 20px;
-
-    background-color: var(--accent-color);
-    color: #fff;
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-button[type="submit"]:hover {
-    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-}
-
-button[type="submit"]:active {
-    color: var(--accent-color);
-    background-color: transparent;
-    border: solid 2px var(--accent-color);
-}
-
-.submit a {
-    text-decoration: none;
-    color: var(--accent-color);
-    font-weight: 700;
-}
-
-.submit a:active {
-    color: var(--light-accent-color);
-}
-
-#invalid {
-    border-color: red;
-}
-
-#invalid + span::after {
-    content: "Password does not match";
-    color: red;
-    letter-spacing: 1px;
-    text-transform: none;
-}
